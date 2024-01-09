@@ -6,7 +6,7 @@ module.exports = {
       secondary: "Mulish",
     },
     screens: {
-      sm: "640px",
+      sm: "200px",
       md: "768px",
       lg: "1024px",
       xl: "1192px",

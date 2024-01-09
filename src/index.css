@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply overflow-hidden text-primary font-secondary bg-white;
+    @apply text-primary font-secondary bg-gray-100;
   }
   .h1 {
     @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
@@ -16,7 +16,7 @@
     @apply h-screen w-screen;
   }
   .btn {
-    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+    @apply py-[18px] px-[50px] h-[66px] text-base uppercase font-secondary font-semibold bg-primary text-white;
   }
 
   .text-gradient {

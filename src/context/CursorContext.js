@@ -3,7 +3,6 @@ import React, { useState, useEffect, createContext } from "react";
 export const CursorContext = createContext();
 
 const CursorProvider = ({ children }) => {
-  //cursor postion state
   const [cursorPos, setCursorPos] = useState({
     x: 0,
     y: 0,
@@ -26,10 +25,11 @@ const CursorProvider = ({ children }) => {
       return () => {
         window.removeEventListener("mousemove", move);
       };
-    } else {
+    } 
+    else {
       setCursorBG("none");
     }
-  });
+  }, [cursorBG, mobileViewportIsActive]);
 
   // cursor variants
   const cursorVariants = {

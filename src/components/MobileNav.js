@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
-//varientss
+//variants
 
 const menuVariant = {
   hidden: { x: "100%" },
@@ -42,7 +42,7 @@ const MobileNav = () => {
     <nav className="text-primary xl:hidden">
       <div
         onClick={() => setOpenMenu(true)}
-        className="text-3xl cursor-pointer"
+        className="text-3xl cursor-pointer hover:text-white transition-colors"
       >
         <CgMenuRight />
       </div>
@@ -56,22 +56,22 @@ const MobileNav = () => {
         <div>
           <IoMdClose
             onClick={() => setOpenMenu(false)}
-            className="text-4xl absolute z-[70] left-4 top-14 text-primary cursor-pointer"
+            className="text-4xl absolute z-[70] left-4 top-14 text-primary cursor-pointer "
           />
         </div>
         {/* menu list  */}
         <ul className="h-full flex flex-col justify-center items-center gap-y-8 text-primary font-primary  font-bold text-3xl">
           <motion.li variants={listVariant}>
-            <Link to="/">Home</Link>
+            <Link onClick={() => {setOpenMenu(false)}} to="/">Home</Link>
           </motion.li>
           <motion.li variants={listVariant}>
-            <Link to="/about">About</Link>
+            <Link onClick={() => {setOpenMenu(false)}} to="/about">About</Link>
           </motion.li>
           <motion.li variants={listVariant}>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link onClick={() => {setOpenMenu(false)}} to="/portfolio">Portfolio</Link>
           </motion.li>
           <motion.li variants={listVariant}>
-            <Link to="/contact">Contact</Link>
+            <Link onClick={() => {setOpenMenu(false)}} to="/contact">Contact</Link>
           </motion.li>
         </ul>
       </motion.div>

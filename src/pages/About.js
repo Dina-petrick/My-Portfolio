@@ -1,68 +1,62 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
-// import link
-import { Link } from "react-router-dom";
 // import motion
 import { motion } from "framer-motion";
 // import transition
 import { transition1 } from "../transitions";
 
-//import image
-
-import about from "../img/about/image.png";
 
 import { CursorContext } from "../context/CursorContext";
 
+
 const About = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-  return (
-    <motion.section
-      initial={{ opacity: 0, y: "100%" }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: "100%" }}
-      transition={transition1}
-      className="section "
-    >
-      <div
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
-        className="container mx-auto h-full relative"
-      >
-        {/* text & img wrapper */}
-        <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-16">
-          {/* image  */}
-          <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden hidden lg:block ">
-            <img src={about} alt="" />
-          </div>
-          {/* text  */}
-          <motion.div
-            initial={{ opacity: 0, y: "-80%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-80%" }}
-            transition={transition1}
-            className="flex-1  pt-36 pb-14 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start"
-          >
-            <h1 className="h1">About Me</h1>
-            <p className="mb-12 max-w-sm">
-              Hi Everyone, I am
-              <b> Dinakaran.</b> From Chennai, India
-              <br />
-              <br />
-              I'm dedicated and highly motivated individual with a passion for
-              technology and web development. Seeking a career change into the
-              IT field as a React JS Developer. Skilled in HTML, CSS,
-              JavaScript, and React JS, with a strong commitment to writing
-              clean, maintainable code and creating user-friendly web
-              applications.
-            </p>
-            <Link to="/portfolio" className="btn">
-              View My Work
-            </Link>
-          </motion.div>
-        </div>
-      </div>
-    </motion.section>
-  );
-};
 
-export default About;
+  return (
+    <section
+      onMouseEnter={mouseEnterHandler}
+      onMouseLeave={mouseLeaveHandler}
+      className='sm:w-[90%] md:w-[100%] mx-auto h-[100vh] flex sm:flex-col md:flex-row sm:pt-[80px] md:pt-[0] justify-center items-center md:gap-[50px]'>
+      <div className='sm:w-[100%] md:w-[50%] flex flex-col font-secondary uppercase text-end sm:text-[40px] md:text-[70px] xl:text-[104px] '>
+        <motion.span
+          initial={{ opacity: 0, x: "-50%" }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: "-50%" }}
+          transition={{transition1, duration: 1}}
+        >who</motion.span>
+        <motion.span
+          initial={{ opacity: 0, x: "-50%" }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: "-50%" }}
+          transition={{transition1, duration: 1.5}}
+        >am</motion.span>
+        <motion.span
+          initial={{ opacity: 0, x: "-50%" }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: "-50%" }}
+          transition={{transition1, duration: 2}}
+        >i</motion.span>
+      </div>
+      <div className='md:w-[50%] h-[80%] sm:mr-auto capitalize font-primary font-medium tracking-tighter'>
+        <motion.div 
+          initial={{ opacity: 0, x: "-50%" }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: "-10%" }}
+          transition={{transition1, duration: .5}}
+        className='max-w-[400px] h-[100%] flex flex-col  justify-evenly text-[18x] lg:text-[22px] text-slate-700'>
+            <p>Hey! I am Dinakaran</p>
+            <span className='w-[5px] h-[5px] inline-block rounded bg-slate-700'></span>
+            <p>A creative frontend developer focus on react jS</p>
+            <span className='w-[5px] h-[5px] inline-block rounded bg-slate-700'></span>
+            <p>I have been working with web technologies for 3 years</p>
+            <span className='w-[5px] h-[5px] inline-block rounded bg-slate-700'></span>
+            <p>Enthusiastic
+              web developer dedicated to incorporating the latest technologies for creating
+              dynamic and responsive web applications</p>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+export default About
