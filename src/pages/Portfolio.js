@@ -25,8 +25,6 @@ const Portfolio = () => {
       className="sm:pt-[100px] flex flex-col w-[100vw] h-[90vh] justify-center"
     >
       <PortfolioLink
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
         heading="Clothing Store"
         subheading="E-commerce site"
         imgSrc={Ecommerce}
@@ -34,8 +32,6 @@ const Portfolio = () => {
       />
 
       <PortfolioLink
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
         heading="Netflix Clone"
         subheading="Entertainment site"
         imgSrc={Netflix}
@@ -43,8 +39,6 @@ const Portfolio = () => {
       />
 
       <PortfolioLink
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
         heading="Umail"
         subheading="Web App"
         imgSrc={Umail}

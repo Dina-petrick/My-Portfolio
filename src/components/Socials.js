@@ -11,23 +11,21 @@ const Socials = () => {
   return (
     <div className="hidden xl:flex ml-24">
       <ul
-
+        onMouseEnter={mouseEnterHandler}
+        onMouseLeave={mouseLeaveHandler}
         className="flex gap-x-4"
       >
-        <li onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaveHandler}>
+        <li>
           <a href="https://www.linkedin.com/in/dinakaran-r/" target="_blank" rel="noopener noreferrer">
             <ImLinkedin className=" rounded-full w-[30px] h-[30px] hover:text-[#0A66C2] hover:rounded-none transition duration-300" />
           </a>
         </li>
-        <li onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaveHandler}>
+        <li>
           <a href="https://github.com/Dina-Petrick " target="_blank" rel="noopener noreferrer">
             <ImGithub className=" rounded-full w-[30px] h-[30px] hover:rounded-md hover:bg-black hover:text-white transition duration-300 " />
           </a>
         </li>
-        <li onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaveHandler}>
+        <li>
           <a href="https://www.instagram.com/dina_petrik_/" target="_blank" rel="noopener noreferrer">
             <AiOutlineInstagram className=" rounded-full w-[30px] bg-primary text-white h-[30px] hover:rounded-md hover:bg-gradient-to-r from-rose-500 to-indigo-600 hover:white  hover:text-white transition duration-300" />
           </a>
