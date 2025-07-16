@@ -10,23 +10,23 @@ const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
   return (
-    <header 
+    <header
 
-    className="fixed w-full px-[30px] z-[60] py-[20px] flex items-center lg:px-[100px]">
-      <div 
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
-      className="flex lg:flex-row lg:items-center w-full justify-between ">
+      className="fixed w-full px-[30px] z-[60] py-[20px] flex items-center lg:px-[100px]">
+      <div
+        className="flex lg:flex-row lg:items-center w-full justify-between ">
         {/* logo */}
 
-        <Link to={"/"} className="max-w-[200px]  ">
+        <Link onMouseEnter={mouseEnterHandler}
+          onMouseLeave={mouseLeaveHandler} to={"/"} className="max-w-[200px]  ">
           <span className="font-primary font-bold text-[24px] hover:text-white transition-colors">Dk</span>
         </Link>
 
         {/* nav - initially hidden - show on desktop mode */}
 
         <nav
-
+          onMouseEnter={mouseEnterHandler}
+          onMouseLeave={mouseLeaveHandler}
           className="hidden xl:flex gap-x-12 font-semibold"
         >
           <Link
