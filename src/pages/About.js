@@ -56,21 +56,20 @@ const About = () => {
           className="max-w-[400px] h-[100%] flex flex-col  justify-evenly text-[18x] lg:text-[22px] text-slate-700"
         >
           <p onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-            Hey! I am Dinakaran
+            Hey! I'm Dinakaran
           </p>
           <span className="w-[5px] h-[5px] inline-block rounded bg-slate-700"></span>
           <p onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-            A creative frontend developer focus on react jS
+            A passionate Front-End Developer specializing in React.js
           </p>
           <span className="w-[5px] h-[5px] inline-block rounded bg-slate-700"></span>
           <p onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-            I have been working with web technologies for 3 years
+            Building modern web experiences with 3+ years of hands-on experience
           </p>
           <span className="w-[5px] h-[5px] inline-block rounded bg-slate-700"></span>
           <p onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-            {" "}
-            Enthusiastic web developer dedicated to incorporating the latest
-            technologies for creating dynamic and responsive web applications
+            Enthusiastic about leveraging the latest technologies to craft
+            responsive, user-centric web apps
           </p>
         </motion.div>
       </div>
