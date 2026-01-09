@@ -2,24 +2,153 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #0a0a0a;
+  --color-secondary: #1a1a1a;
+  --color-accent: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fafafa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100px, #fafafa 15000px);
+  background-size: 100% 15000px;
+  background-repeat: no-repeat;
+  background-color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: transparent;
+}
+
+/* Prevent any child elements from causing overflow */
+* {
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent framer-motion animations from causing overflow */
+[data-framer-component-type] {
+  max-width: 100%;
+}
+
+/* Ensure all sections respect viewport */
+section, main, article {
+  width: 100%;
+  position: relative;
+}
+
 @layer base {
   body {
-    @apply text-primary font-secondary bg-gray-100;
+    color: #0a0a0a;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
   }
+  
   .h1 {
-    @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
+    @apply text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight;
+    font-family: "Playfair Display", serif;
   }
+  
   .h2 {
-    @apply font-primary text-[48px] mb-6 tracking-[10%] uppercase;
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight;
+    font-family: "Playfair Display", serif;
   }
+  
   .section {
-    @apply h-screen w-screen;
+    @apply w-full;
   }
+  
   .btn {
-    @apply py-[18px] px-[50px] h-[66px] text-base uppercase font-secondary font-semibold bg-primary text-white;
+    @apply px-8 py-4 text-sm font-medium tracking-wide uppercase transition-all duration-300 relative overflow-hidden;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: "Mulish", sans-serif;
+    letter-spacing: 1.5px;
+    border-radius: 0.5rem;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn:hover::before {
+    left: 100%;
+  }
+  
+  .btn:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gray-800 via-gray-900 to-black bg-clip-text text-transparent;
+  }
+  
+  .section-title {
+    @apply text-xs uppercase tracking-widest text-gray-500 mb-4 font-medium;
+    letter-spacing: 2px;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-dark {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }

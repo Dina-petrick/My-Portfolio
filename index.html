@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/portfolio.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <style>
+      /* Prevent horizontal scrollbar flash - critical CSS */
+      html {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        position: relative;
+      }
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-height: 100% !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        position: relative;
+      }
+      #root {
+        width: 100% !important;
+        min-height: 100vh !important;
+        position: relative;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      /* Hide scrollbar visually but allow scrolling */
+      body::-webkit-scrollbar {
+        width: 8px;
+      }
+      body::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      body::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+      }
+      body::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.3);
+      }
+    </style>
+    <script>
+      // Prevent scrollbar flash immediately on page load
+      (function() {
+        // Set overflow immediately
+        document.documentElement.style.overflowX = 'hidden';
+        document.documentElement.style.overflowY = 'auto';
+        document.body.style.overflowX = 'hidden';
+        document.body.style.overflowY = 'auto';
+        
+        // Prevent double scrollbar - ensure only body scrolls
+        function ensureSingleScrollbar() {
+          const root = document.getElementById('root');
+          if (root) {
+            root.style.overflowY = 'visible';
+            root.style.overflowX = 'hidden';
+          }
+          
+          // Ensure child sections don't create their own scrollbars
+          const sections = document.querySelectorAll('#root section, #root main, #root article');
+          sections.forEach(el => {
+            const style = window.getComputedStyle(el);
+            if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
+              el.style.overflowY = 'visible';
+            }
+          });
+        }
+        
+        // Run immediately
+        ensureSingleScrollbar();
+        
+        // Run after DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', ensureSingleScrollbar);
+        }
+        
+        // Run after React hydrates (catch dynamically rendered content)
+        setTimeout(ensureSingleScrollbar, 200);
+      })();
+    </script>
+    <meta
+      name="description"
+      content="Dinakaran R - Frontend Software Engineer | React.js • TypeScript • WebSockets | 3+ Years Experience | Resulticks | Building Scalable Web Applications & Real-time SDKs"
+    />
+    <meta
+      name="keywords"
+      content="Frontend Engineer, React.js Developer, TypeScript, Software Engineer, Web Developer, React Developer, Frontend Developer"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dinakaran R | Frontend Software Engineer | React.js • TypeScript</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>
