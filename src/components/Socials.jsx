@@ -13,7 +13,7 @@ const Socials = () => {
       <ul className="flex gap-x-4 items-center">
         <li>
           <a 
-            href="https://www.linkedin.com/in/dinakaran-r/" 
+            href="https://www.linkedin.com/in/rdinakaran/" 
             target="_blank" 
             rel="noopener noreferrer"
             onMouseEnter={mouseEnterHandler}
@@ -56,3 +56,4 @@ const Socials = () => {
 };
 
 export default Socials;
+
