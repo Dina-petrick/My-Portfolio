@@ -15,14 +15,17 @@ const Home = () => {
     "Node.js",
     "WebSockets",
     "Redux",
-    "GraphQL",
+    "REST APIs",
     "Firebase",
+    "Supabase",
     "HTML5",
     "CSS3",
     "Tailwind CSS",
     "Git",
     "Webpack",
     "Vite",
+    "Jest",
+    "Framer Motion",
   ];
 
   // Duplicate skills for seamless infinite scroll
@@ -58,7 +61,7 @@ const Home = () => {
             transition={{ ...transition1, delay: 0.3 }}
             className="space-y-2"
           >
-            <span className="text-sm uppercase tracking-widest text-text-muted font-medium">Hello, I'm</span>
+            <span className="text-sm uppercase tracking-widest text-text-muted font-medium">Hello, I'm Dinakaran R</span>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -66,7 +69,7 @@ const Home = () => {
               className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-primary font-bold leading-[1.1] tracking-tight relative"
             >
               <span className="block bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                Frontend Software
+                Software
               </span>
               <span className="block text-primary">Engineer</span>
             </motion.h1>
@@ -77,7 +80,7 @@ const Home = () => {
             transition={{ ...transition1, delay: 0.5 }}
             className="text-lg md:text-xl lg:text-2xl text-text-secondary font-light leading-relaxed max-w-xl"
           >
-            Building scalable web applications and real-time SDKs with React.js & TypeScript
+            React.js · TypeScript · Front-End — scalable web apps and framework-agnostic Web SDKs
           </motion.p>
         </div>
 
@@ -88,11 +91,10 @@ const Home = () => {
           className="space-y-4"
         >
           <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-xl">
-            Results-driven engineer with <span className="font-semibold text-primary">3+ years</span> of experience architecting enterprise solutions. 
-            Delivered <span className="font-semibold text-primary">40% performance improvement</span>, 
-            <span className="font-semibold text-primary"> 20% increase in engagement</span>, and 
-            <span className="font-semibold text-primary"> 99.9% system uptime</span> through 
-            advanced optimization techniques and modern frontend architectures.
+            Frontend engineer with <span className="font-semibold text-primary">4+ years</span> of experience building production-grade UIs and Web SDKs.
+            Leading SDK work with real-time integrations across <span className="font-semibold text-primary">50+ client apps</span>, stronger engagement
+            (<span className="font-semibold text-primary">+20%</span>), faster APIs (<span className="font-semibold text-primary">−25% response times</span>),
+            and <span className="font-semibold text-primary">99.9% uptime</span> — plus mentoring a small team and migrating legacy stacks to React.
           </p>
         </motion.div>
 

@@ -81,12 +81,23 @@ const Contact = () => {
           <div className="space-y-2">
             <p className="text-xs uppercase tracking-widest text-text-muted font-semibold">Email</p>
             <a 
-              href="mailto:dinakaranswe@gmail.com" 
+              href="mailto:dinakaransde@gmail.com" 
               onMouseEnter={mouseEnterHandler}
               onMouseLeave={mouseLeaveHandler}
               className="text-lg text-text-primary hover:text-primary transition-colors font-medium inline-block"
             >
-              dinakaranswe@gmail.com
+              dinakaransde@gmail.com
+            </a>
+          </div>
+          <div className="space-y-2">
+            <p className="text-xs uppercase tracking-widest text-text-muted font-semibold">Phone</p>
+            <a
+              href="tel:+917305356563"
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className="text-lg text-text-primary hover:text-primary transition-colors font-medium inline-block"
+            >
+              +91 73053 56563
             </a>
           </div>
           <div className="space-y-2">

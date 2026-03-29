@@ -1,4 +1,5 @@
 import PortfolioLink from "../components/PortfolioLink";
+import Profile from "../img/home/Profile.jpg";
 import Netflix from "../img/portfolio/netflix.PNG";
 import Ecommerce from "../img/portfolio/e-commerce.PNG";
 import Umail from "../img/portfolio/umail.PNG";
@@ -12,19 +13,7 @@ const Portfolio = () => {
       subheading: "React.js • Firebase • Redux • Production-ready platform serving 500+ daily active users",
       imgSrc: Ecommerce,
       href: "https://ecommerce-clothing-store.vercel.app/",
-    },
-    {
-      heading: "Netflix Clone",
-      subheading: "React.js • TypeScript • Entertainment platform with optimized streaming experience",
-      imgSrc: Netflix,
-      href: "https://netflix-site.vercel.app/",
-    },
-    {
-      heading: "Umail",
-      subheading: "React.js • Modern email client with real-time updates and intuitive UI",
-      imgSrc: Umail,
-      href: "https://umail.vercel.app/",
-    },
+    }
   ];
 
   return (

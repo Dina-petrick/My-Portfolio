@@ -58,7 +58,7 @@ const PortfolioLink = ({heading, subheading, imgSrc, href}) => {
             staggerChildren: 0.075,
             delayChildren: 0.25,
           }}
-          className="relative z-10 block text-3xl md:text-4xl lg:text-5xl font-primary font-bold text-primary transition-colors duration-300 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:bg-clip-text group-hover:text-transparent"
+          className="relative z-10 block text-3xl md:text-4xl lg:text-5xl font-primary font-bold text-primary transition-colors duration-300 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:bg-clip-text"
         >
           {heading.split("").map((l, i) => (
             <motion.span
