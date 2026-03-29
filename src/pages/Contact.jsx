@@ -89,17 +89,7 @@ const Contact = () => {
               dinakaransde@gmail.com
             </a>
           </div>
-          <div className="space-y-2">
-            <p className="text-xs uppercase tracking-widest text-text-muted font-semibold">Phone</p>
-            <a
-              href="tel:+917305356563"
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
-              className="text-lg text-text-primary hover:text-primary transition-colors font-medium inline-block"
-            >
-              +91 73053 56563
-            </a>
-          </div>
+
           <div className="space-y-2">
             <p className="text-xs uppercase tracking-widest text-text-muted font-semibold">Location</p>
             <p className="text-lg text-text-secondary font-medium flex items-center gap-2">
