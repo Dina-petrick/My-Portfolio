@@ -1,0 +1,2 @@
+# Netlify, Cloudflare Pages, and similar static hosts — SPA fallback (200 = rewrite, not redirect)
+/*    /index.html   200
