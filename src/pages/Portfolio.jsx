@@ -12,7 +12,7 @@ const Portfolio = () => {
       heading: "E-commerce Clothing Store",
       subheading: "React.js • Firebase • Redux • Production-ready platform serving 500+ daily active users",
       imgSrc: Ecommerce,
-      href: "https://ecommerce-clothing-store.vercel.app/",
+      href: "https://clothingstore.dinakaranr.in/",
     }
   ];
 

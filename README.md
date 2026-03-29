@@ -41,7 +41,7 @@ Developed 5+ production-ready responsive web applications using React.js, JavaSc
 
 Production-ready platform serving 500+ daily active users with seamless shopping experience, real-time inventory management, and secure payment integration.
 
-🔗 [Live Demo](https://ecommerce-clothing-store.vercel.app/)
+🔗 [Live Demo](https://clothingstore.dinakaranr.in/)
 
 ### Netflix Clone
 **React.js • TypeScript**
