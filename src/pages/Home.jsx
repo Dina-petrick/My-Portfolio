@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import profile from "../img/home/Profile.jpg";
+import profile from "../img/home/ProfilePic.png";
 import { transition1 } from "../transitions";
 import { CursorContext } from "../context/CursorContext";
 
